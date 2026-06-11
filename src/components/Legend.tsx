@@ -3,7 +3,7 @@ import { useStackingStore } from '../store/useStackingStore'
 import { fmt } from '../lib/utils'
 
 export default function Legend() {
-  const { filteredUnits, tenantColors, hlTenant, toggleHlTenant, showVac } = useStackingStore()
+  const { filteredUnits, tenantColors, hlTenant, toggleHlTenant } = useStackingStore()
   const units = filteredUnits()
 
   const { tenantMap, vacantM2 } = useMemo(() => {
@@ -24,7 +24,7 @@ export default function Legend() {
         Arrendatarios
       </h3>
 
-      {showVac && vacantM2 > 0 && (
+      {vacantM2 > 0 && (
         <button
           onClick={() => toggleHlTenant('Vacante')}
           className={`w-full flex items-center gap-1.5 px-1 py-0.5 rounded hover:bg-gray-50 mb-0.5 text-left transition-opacity ${

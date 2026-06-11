@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import { toPng } from 'html-to-image'
 import { createPortal } from 'react-dom'
 import { useEscKey } from '../../hooks/useEscKey'

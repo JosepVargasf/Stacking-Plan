@@ -80,7 +80,7 @@ function FloorRow({
   bodUnits,
   otherUnits,
   scale,
-  m2Width,
+  m2Width: _m2Width,
   fixedEstacWidth,
   fixedBodWidth,
   show, move, hide,

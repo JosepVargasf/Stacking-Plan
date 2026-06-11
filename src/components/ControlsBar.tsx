@@ -24,8 +24,6 @@ export default function ControlsBar() {
     setFilterTenant,
     filterExpiry,
     setFilterExpiry,
-    showVac,
-    setShowVac,
     allTenants,
   } = useStackingStore()
 
@@ -97,18 +95,6 @@ export default function ControlsBar() {
         </select>
       </div>
 
-      <Divider />
-
-      {/* Vacantes toggle */}
-      <label className="flex items-center gap-1.5 cursor-pointer text-xs font-medium text-[#607D8B]">
-        <input
-          type="checkbox"
-          checked={showVac}
-          onChange={(e) => setShowVac(e.target.checked)}
-          className="accent-[#1A237E]"
-        />
-        Vacantes
-      </label>
     </div>
   )
 }

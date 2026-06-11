@@ -141,7 +141,7 @@ export default function VencimientosChart() {
             />
             <Tooltip
               contentStyle={{ fontSize, borderRadius: 8, border: '1px solid #CFD8DC' }}
-              formatter={(value: number) => [value.toLocaleString('es-CL'), undefined]}
+              formatter={(value: unknown) => [(value as number).toLocaleString('es-CL'), '']}
             />
             <Legend wrapperStyle={{ fontSize }} />
             {(mode === 'venc' || mode === 'both') && (

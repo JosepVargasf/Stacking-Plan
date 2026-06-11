@@ -175,7 +175,7 @@ export async function parseRentRoll(file: File): Promise<RawData> {
 
   const merged: Partial<ColumnMapping> = { ...autoResolved }
   for (const [key, headerName] of Object.entries(saved)) {
-    if (headers.includes(headerName)) merged[key] = headerName
+    if (headerName && headers.includes(headerName)) (merged as Record<string, string>)[key] = headerName
   }
 
   const stillUnresolved = unresolved.filter((f) => !merged[f.key])

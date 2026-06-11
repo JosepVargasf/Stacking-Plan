@@ -127,7 +127,7 @@ export default function RankingChart() {
               />
               <Tooltip
                 contentStyle={{ fontSize, borderRadius: 8, border: '1px solid #CFD8DC' }}
-                formatter={(value: number) => [value.toLocaleString('es-CL'), yLabel]}
+                formatter={(value: unknown) => [(value as number).toLocaleString('es-CL'), yLabel]}
               />
               <Bar dataKey="value" name={yLabel} radius={[0, 4, 4, 0]}>
                 {data.map((entry) => (
